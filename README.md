@@ -20,4 +20,4 @@ Instalation folder is:
 /usr/local/bin
 
 ...edit Makefile LOCATION if
-you want it differente.
+you want it different.
