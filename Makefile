@@ -1,15 +1,42 @@
-LOCATION	=	/usr/local
+# ********************************************* #
+#                                               #
+#                      :||::||:::||:||:|::|||:  #
+#  Makefile            :|::|:|||:||||::::|||||  #
+#                      |:|:|:::|::::::|:|:||::  #
+#      :|:::: <:|::::>                          #
+#                                               #
+#  C20191204153419 :|::::                       #
+#  U20191204153648 |:::::                       #
+#                                               #
+# ********************************************* #
 
-INSTALLSHELLS	=	cu_*.sh
+LOCATION	=	/usr/local/bin
 
-NAME		=	CU
+EXTERNALS	=	../xic
 
-install:	create_dir
-	cp $(INSTALLSHELLS) $(DESTDIR)$(LOCATION)/bin
+INSTALLSHELLS	=	cu_*
+
+NAME		=	cu
+
+install:	create_dir $(EXTERNALS)
+	cp $(INSTALLSHELLS) $(DESTDIR)$(LOCATION)
 
 create_dir:
-	mkdir -p $(DESTDIR)$(LOCATION)/bin
+	mkdir -p $(DESTDIR)$(LOCATION)
 	
-run:	install
-	cu_byobu_nof1
-	bu_x_header
+run:
+	./bu_byobu_nof1
+	./bu_vim
+
+edheader:
+	vim zim/.vim/after/plugin/x_header.vim
+	./bu_vim
+
+edvim:
+	vim zim/.vimrc
+	./bu_vim
+
+external:
+	make install -C $(EXTERNALS)
+
+all:	external install run

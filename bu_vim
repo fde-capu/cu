@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# C. U. - Computer Utilizator
+# by fde_capu
+#
+#  bu_vim 
+#
+# Copies the custom x_header to Vim.
+
+cp ~/cu/zim/.vimrc ~/.vimrc
+cp -r ~/cu/zim/.vim/* ~/.vim

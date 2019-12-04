@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# C. U. - Computer Utilizator
+# by fde-capu
+#
+#   cu_vimhead
+#
+# Edits the header template and updates on Vim.
+
+vim ~/cu/zim/.vim/after/plugin/x_header.vim
+~/cu/bu_vim
