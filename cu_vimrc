@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# C. U. - Computer Utilizator
+# by fde-capu
+#
+#   cu_vimrc
+#
+# Edits ~/.vimrc template and updates on Vim.
+
+vim ~/cu/zim/.vimrc
+~/cu/bu_vim
