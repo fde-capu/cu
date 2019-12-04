@@ -1,8 +1,8 @@
-SHELLS		=	*.sh
 LOCATION	=	/usr/local
-NAME		=	CU
 
 SHELLS		=	*.sh
+
+NAME		=	CU
 
 install:	create_dir
 	cp $(SHELLS) $(DESTDIR)$(LOCATION)/bin
