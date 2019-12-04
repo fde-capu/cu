@@ -3,4 +3,6 @@
 !Makefile
 !README.md
 !cu_*
+!bu_*
 !/zim/*
+!/zim

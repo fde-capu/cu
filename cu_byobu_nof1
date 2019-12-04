@@ -3,7 +3,7 @@
 # C. U. Computer Utilizator
 # by fde_capu
 #
-#   cu_byobu_nof1.sh
+#   cu_byobu_nof1
 #
 # Unbind F1 help in byobu tmux.
 # This is mande necessary to

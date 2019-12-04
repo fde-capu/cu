@@ -3,7 +3,7 @@
 # C. U. Computer Utilizator
 # by fde_capu
 #
-#    cu_aif0.sh (line string), (filename)
+#    cu_aif0 (line string), (filename)
 #
 # Appends line string to file only if line does not exist.
 
