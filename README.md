@@ -13,7 +13,7 @@ author.
 
 This should do all tricks:
 
-# sudo make run
+# sudo make all
 
 Instalation folder is:
 
