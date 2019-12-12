@@ -7,5 +7,5 @@
 #
 # Copies the custom x_header to Vim.
 
-cp ~/cu/zim/.vimrc ~/.vimrc
-cp -r ~/cu/zim/.vim/* ~/.vim
+cp ./zim/.vimrc ~/.vimrc
+cp -r ./zim/.vim/* ~/.vim

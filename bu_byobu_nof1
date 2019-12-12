@@ -9,4 +9,4 @@
 # This is mande necessary to
 # properly bind F1 to a header.
 
-cu_aif0.sh "unbind-key -n F1" ~/.byobu/keybindings.tmux
+cu_aif0 "unbind-key -n F1" ~/.byobu/keybindings.tmux
