@@ -7,5 +7,5 @@
 #
 # Edits ~/.vimrc template and updates on Vim.
 
-vim ~/cu/zim/.vimrc
-~/cu/bu_vim
+vim ./zim/.vimrc
+./bu_vim

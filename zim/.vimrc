@@ -1,12 +1,12 @@
 " ********************************************* "
 "                                               "
 "                      :|:|::|:|:||:|:::|:|||:  "
-"  .vimrc              ||::|::||:||||::|||:::|  "
+"  .vimrc              |:|||:::|||:|:::|::::||  "
 "                      |::::|::::::||||||:|:|:  "
 "      ||||:| <||||:|>                          "
 "                                               "
 "  C20191204163730 ||||:|                       "
-"  U20191204163734 ||:::|                       "
+"  U20191213104040 :|:|||                       "
 "                                               "
 " ********************************************* "
 
@@ -110,8 +110,15 @@ inoremap <C-S-tab>	<Esc>:tabprevious<CR>i
 inoremap <C-tab>	<Esc>:tabnext<CR>i
 inoremap <C-t>		<Esc>:tabnew<CR>
 
-" o and O will not enter Insert Mode:
-nnoremap o o<Esc>
-nnoremap O O<Esc>
+" ignores opened files
+set hidden
 
+" my version of 'put' without moving the cursor using Pu
+" as in my question at SE Vi an Vim Beta
+command! -bar -bang -range -register Put call append(<line2> - <bang>0, getreg(<q-reg>, 1, 1))
 
+" autosave whenever buffer is switched
+set autowriteall
+
+" autosave when window looses focus
+au FocusLost * :wa

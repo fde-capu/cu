@@ -1,12 +1,12 @@
 " ********************************************* "
 "                                               "
 "                                               "
-"  x_header.vim                                 "
+"  x_header.vim        ||:||:|::||::|:||::::|:  "
 "                                               "
 "      :::||: <:::||:>                          "
 "                                               "
 "  C20191206105613 |:||::                       "
-"  U20191206105658 :::||:                    0  "
+"  U20191211154749 ||:|::                       "
 "                                               "
 " ********************************************* "
 
@@ -141,7 +141,7 @@ function! s:update()
 		if &mod
 			call setline(9, s:line(9))
 		endif
-		call setline(4, s:line(4))
+		" call setline(4, s:line(4)) " calls new filename
 		return 0
 	endif
 	return 1
