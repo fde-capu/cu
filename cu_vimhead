@@ -7,5 +7,5 @@
 #
 # Edits the header template and updates on Vim.
 
-vim ./zim/.vim/after/plugin/x_header.vim
-./bu_vim
+vim ~/_/cu/zim/.vim/after/plugin/x_header.vim
+~/_/cu/bu_vim

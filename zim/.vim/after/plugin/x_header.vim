@@ -6,7 +6,7 @@
 "      :::||: <:::||:>                          "
 "                                               "
 "  C20191206105613 |:||::                       "
-"  U20191211154749 ||:|::                       "
+"  U20191218162430 :|::::                       "
 "                                               "
 " ********************************************* "
 
@@ -21,9 +21,8 @@ function! s:ext(cmd, args)
 	return s:ret
 endfunction
 
-"let s:asciiart = split(s:ext("xic", "random array=7 expand"), ",")
-"let s:asciiart = split(s:ext("xic", "random array=3 expand"), ",") + ["","","",""]
 let s:asciiart = split(s:ext("xic", "random array=3"), ",") + ["","","",""]
+"let s:asciiart = split(s:ext("xic", "random array=4"), ",") + ["","",""]
 
 let s:start		= '/*'
 let s:end		= '*/'
