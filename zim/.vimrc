@@ -6,7 +6,7 @@
 "      ||||:| <||||:|>                          "
 "                                               "
 "  C20191204163730 ||||:|                       "
-"  U20191213104040 :|:|||                       "
+"  U20191218161712 :||||:                       "
 "                                               "
 " ********************************************* "
 
@@ -122,3 +122,7 @@ set autowriteall
 
 " autosave when window looses focus
 au FocusLost * :wa
+
+" makes `:sb filename` usefull to swich splits by typing filename (w/ autocomplete!)
+" from tackoverflow 5305137     
+ :set switchbuf +=useopen

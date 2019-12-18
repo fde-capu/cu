@@ -6,7 +6,7 @@
 #      :|:::: <:|::::>                          #
 #                                               #
 #  C20191204153419 :|::::                       #
-#  U20191204153648 |:::::                       #
+#  U20191218161108 |:|::|                       #
 #                                               #
 # ********************************************* #
 
@@ -26,14 +26,6 @@ create_dir:
 	
 run:
 	./bu_byobu_nof1
-	./bu_vim
-
-edheader:
-	vim zim/.vim/after/plugin/x_header.vim
-	./bu_vim
-
-edvim:
-	vim zim/.vimrc
 	./bu_vim
 
 external:
