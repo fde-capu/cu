@@ -6,7 +6,7 @@
 "      ||||:| <||||:|>                          "
 "                                               "
 "  C20191204163730 ||||:|                       "
-"  U20191218161829 :|::::                       "
+"  U20191219095104 :||:|:                       "
 "                                               "
 " ********************************************* "
 
@@ -126,3 +126,6 @@ au FocusLost * :wa
 " makes `:sb filename` usefull to swich splits by typing filename (w/ autocomplete!)
 " from tackoverflow 5305137     
  :set switchbuf +=useopen
+ 
+ " spelling check ([s and s] moves, z= list, 1z= get first from list)
+ :set spell
