@@ -6,7 +6,7 @@
 "      ||||:| <||||:|>                          "
 "                                               "
 "  C20191204163730 ||||:|                       "
-"  U20191219095104 :||:|:                       "
+"  U20200114001035 |:::||                       "
 "                                               "
 " ********************************************* "
 
@@ -23,6 +23,9 @@ set nu
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
+
+" uses pathogen plugin manager
+execute pathogen#infect()
 
 " syntax
 syn on
@@ -128,4 +131,10 @@ au FocusLost * :wa
  :set switchbuf +=useopen
  
  " spelling check ([s and s] moves, z= list, 1z= get first from list)
- :set spell
+" :set spell
+
+" uses dracula
+colorscheme dracula
+
+" but with custom:
+:highlight Normal ctermbg=0
