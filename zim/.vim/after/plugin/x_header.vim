@@ -112,7 +112,7 @@ function! s:line(n)
 		return s:textline(s:filename(), s:ascii(a:n))
 	elseif a:n == 6 " author
 		if g:isx == 69
-			return ""
+			return s:textline("", s:ascii(a:n))
 			return s:textline("    " . s:user() . " <" . s:mail() . ">", s:ascii(a:n))
 		endif
 		if g:isx == 42
@@ -211,6 +211,7 @@ endfunction
 
 
 " Bind command and shortcut
+call s:config(42)
 command! Stdheader call s:config(42) | call s:stdheader ()
 command! StdheaderX call s:config(69) | call s:stdheader ()
 nmap <f1> <esc>:Stdheader<CR>
