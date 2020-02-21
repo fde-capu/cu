@@ -1,34 +1,56 @@
 " ********************************************* "
 "                                               "
+"                      :|::|::||::|:|:::|::::|  "
+"  x_header.vim        :||:::||:|:|:|||::|||:|  "
+"                      |:||||::::::||||||:|::|  "
+
 "                                               "
-"  x_header.vim        ||:||:|::||::|:||::::|:  "
-"                                               "
-"      :::||: <:::||:>                          "
-"                                               "
-"  C20191206105613 |:||::                       "
-"  U20191218162430 :|::::                       "
+"  C20200221015226 ::||||                       "
+"  U20200221015348 :|:|:|                       "
 "                                               "
 " ********************************************* "
-
-"  This file is based on:
-"  git@github.com:pbondoer/vim-42header.git
-"  ...with the implementation of xic.
 "
+" This file is based on:
+" git@github.com:pbondoer/vim-42header.git
+" ...with the implementation of xic.
 "
 
 function! s:ext(cmd, args)
-	let s:ret =system(a:cmd . " " . a:args)
+	let s:ret = system(a:cmd . " " . a:args)
 	return s:ret
 endfunction
 
-let s:asciiart = split(s:ext("xic", "random array=3"), ",") + ["","","",""]
-"let s:asciiart = split(s:ext("xic", "random array=4"), ",") + ["","",""]
+
+let s:asciiartX = split(s:ext("xic", "random array=3"), ",") + ["","","",""]
+"let s:asciiartX = split(s:ext("xic", "random array=4"), ",") + ["","",""]
+
+let s:asciiart = [
+			\"        :::      ::::::::",
+			\"      :+:      :+:    :+:",
+			\"    +:+ +:+         +:+  ",
+			\"  +#+  +:+       +#+     ",
+			\"+#+#+#+#+#+   +#+        ",
+			\"     #+#    #+#          ",
+			\"    ###   ########.fr    "
+			\]
 
 let s:start		= '/*'
 let s:end		= '*/'
 let s:fill		= '*'
-let s:length	= 49
-let s:margin	= 3
+let g:isx		= 42
+
+function! s:config(x)
+	if a:x == 42
+		let g:isx		= 42
+		let s:length	= 80
+		let s:margin	= 5
+	endif
+	if a:x == 69 
+		let g:isx		= 69
+		let s:length	= 49
+		let s:margin	= 3
+	endif
+endfunction
 
 let s:types		= {
 			\'\.c$\|\.h$\|\.cc$\|\.hh$\|\.cpp$\|\.hpp$\|\.php\|\.glsl':
@@ -66,12 +88,16 @@ function! s:filetype()
 endfunction
 
 function! s:ascii(n)
-	return s:asciiart[a:n - 3]
+	if g:isx == 42
+		return s:asciiart[a:n - 3]
+	endif
+	if g:isx == 69
+		return s:asciiartX[a:n - 3]
+	endif
 endfunction
 
 function! s:textline(left, right)
 	let l:left = strpart(a:left, 0, s:length - s:margin * 3 - strlen(a:right) + 1)
-
 	return s:start . repeat(' ', s:margin - strlen(s:start)) . l:left . repeat(' ', s:length - s:margin * 2 - strlen(l:left) - strlen(a:right)) . a:right . repeat(' ', s:margin - strlen(s:end)) . s:end
 endfunction
 
@@ -85,16 +111,37 @@ function! s:line(n)
 	elseif a:n == 4 " filename
 		return s:textline(s:filename(), s:ascii(a:n))
 	elseif a:n == 6 " author
-		return s:textline("    " . s:user() . " <" . s:mail() . ">", s:ascii(a:n))
+		if g:isx == 69
+			return ""
+			return s:textline("    " . s:user() . " <" . s:mail() . ">", s:ascii(a:n))
+		endif
+		if g:isx == 42
+			return s:textline("" . s:user() . " <" . s:mail() . ">", s:ascii(a:n))
+		endif
 	elseif a:n == 8 " created
-		return s:textline("C" . s:date() . " " . s:user(), s:ascii(a:n))
+		if g:isx == 69
+			return s:textline("C" . s:date() . " " . s:user(), s:ascii(a:n))
+		endif
+		if g:isx == 42
+			return s:textline("Created: " . s:date() . " by " . s:user(), s:ascii(a:n))
+		endif
 	elseif a:n == 9 " updated
-		return s:textline("U" . s:date() . " " . s:user(), s:ascii(a:n))
+		if g:isx == 69
+			return s:textline("U" . s:date() . " " . s:user(), s:ascii(a:n))
+		endif
+		if g:isx == 42
+			return s:textline("Updated: " . s:date() . " by " . s:user(), s:ascii(a:n))
+		endif
 	endif
 endfunction
 
 function! s:user()
-	let l:user = s:ext("xic", "hex random")
+	if g:isx == 69
+		let l:user = s:ext("xic", "hex random")
+	endif		
+	if g:isx == 42
+		let l:user = "fde-capu"
+	endif
 	return l:user
 endfunction
 
@@ -104,7 +151,12 @@ function! s:mail()
 		let l:mail = g:hdr42mail
 	endif
 	if strlen(l:mail) == 0
-		let l:mail = s:ext("xic", "hex random")
+		if g:isx == 69
+			let l:mail = s:ext("xic", "hex random")
+		endif
+		if g:isx == 42
+			let l:mail = "fde-capu@student.42sp.org.br"
+		endif	
 	endif
 	return l:mail
 endfunction
@@ -118,7 +170,12 @@ function! s:filename()
 endfunction
 
 function! s:date()
-	return strftime("%Y%m%d%H%M%S")
+	if g:isx == 69
+		return strftime("%Y%m%d%H%M%S")
+	endif
+	if g:isx == 42
+		return strftime("%Y/%m/%d %H:%M:%S")
+	endif
 endfunction
 
 function! s:insert()
@@ -140,7 +197,7 @@ function! s:update()
 		if &mod
 			call setline(9, s:line(9))
 		endif
-		" call setline(4, s:line(4)) " calls new filename
+		call setline(4, s:line(4)) " calls new filename
 		return 0
 	endif
 	return 1
@@ -152,7 +209,10 @@ function! s:stdheader()
 	endif
 endfunction
 
+
 " Bind command and shortcut
-command! Stdheader call s:stdheader ()
-nmap <f1> <esc>:Stdheader<CR>:1<CR>
+command! Stdheader call s:config(42) | call s:stdheader ()
+command! StdheaderX call s:config(69) | call s:stdheader ()
+nmap <f1> <esc>:Stdheader<CR>
+nmap <f2> <esc>:StdheaderX<CR>
 autocmd BufWritePre * call s:update ()

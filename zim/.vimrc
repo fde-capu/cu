@@ -6,7 +6,7 @@
 "      ||||:| <||||:|>                          "
 "                                               "
 "  C20191204163730 ||||:|                       "
-"  U20200114001035 |:::||                       "
+"  U20200214142236 |:::||                       "
 "                                               "
 " ********************************************* "
 
@@ -38,9 +38,6 @@ set hlsearch
 
 " backspace compatibilities
 set backspace=indent,eol,start
-
-" obvious
-set background=dark
 
 " usefull
 set encoding=utf-8
@@ -138,3 +135,6 @@ colorscheme dracula
 
 " but with custom:
 :highlight Normal ctermbg=0
+
+" change current directory to the one the current buffer is
+:set autochdir
