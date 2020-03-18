@@ -96,6 +96,11 @@ function! s:ascii(n)
 	endif
 endfunction
 
+function! s:textline6(left, right)
+	let l:left = strpart(a:left, 0, s:length - s:margin * 3 - strlen(a:right) + 2)
+	return s:start . repeat(' ', s:margin - strlen(s:start)) . l:left . repeat(' ', 0 + s:length - s:margin * 2 - strlen(l:left) - strlen(a:right)) . a:right . repeat(' ', s:margin - strlen(s:end)) . s:end
+endfunction
+
 function! s:textline(left, right)
 	let l:left = strpart(a:left, 0, s:length - s:margin * 3 - strlen(a:right) + 1)
 	return s:start . repeat(' ', s:margin - strlen(s:start)) . l:left . repeat(' ', s:length - s:margin * 2 - strlen(l:left) - strlen(a:right)) . a:right . repeat(' ', s:margin - strlen(s:end)) . s:end
@@ -116,7 +121,7 @@ function! s:line(n)
 			return s:textline("    " . s:user() . " <" . s:mail() . ">", s:ascii(a:n))
 		endif
 		if g:isx == 42
-			return s:textline("" . s:user() . " <" . s:mail() . ">", s:ascii(a:n))
+			return s:textline6("By: " . s:user() . " <" . s:mail() . ">", s:ascii(a:n))
 		endif
 	elseif a:n == 8 " created
 		if g:isx == 69
