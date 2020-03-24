@@ -18,17 +18,18 @@ INSTALLSHELLS	=	cu_*
 
 NAME		=	cu
 
+all:	external install run
+
 install:	create_dir $(EXTERNALS)
 	cp $(INSTALLSHELLS) $(DESTDIR)$(LOCATION)
+	chmod +x $(DESTDIR)$(LOCATION)/cu*
 
 create_dir:
 	mkdir -p $(DESTDIR)$(LOCATION)
 	
 run:
-	./bu_byobu_nof1
-	./bu_vim
+	bash ./bu_vim
+	#bash ./bu_byobu_nof1
 
 external:
 	make install -C $(EXTERNALS)
-
-all:	external install run

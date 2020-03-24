@@ -1,15 +1,15 @@
-" ********************************************* "
-"                                               "
-"                      :|::|::||::|:|:::|::::|  "
-"  x_header.vim        :||:::||:|:|:|||::|||:|  "
-"                      |:||||::::::||||||:|::|  "
+" **************************************************************************** "
+"                                                                              "
+"                                                         :::      ::::::::    "
+"    x_header.vim                                       :+:      :+:    :+:    "
+"                                                     +:+ +:+         +:+      "
+"    By: fde-capu <fde-capu@student.42sp.org.br>    +#+  +:+       +#+         "
+"                                                 +#+#+#+#+#+   +#+            "
+"    Created: 2020/03/23 21:39:30 by fde-capu          #+#    #+#              "
+"    Updated: 2020/03/23 21:39:35 by fde-capu         ###   ########.fr        "
+"                                                                              "
+" **************************************************************************** "
 
-"                                               "
-"  C20200221015226 ::||||                       "
-"  U20200221015348 :|:|:|                       "
-"                                               "
-" ********************************************* "
-"
 " This file is based on:
 " git@github.com:pbondoer/vim-42header.git
 " ...with the implementation of xic.
@@ -97,7 +97,7 @@ function! s:ascii(n)
 endfunction
 
 function! s:textline6(left, right)
-	let l:left = strpart(a:left, 0, s:length - s:margin * 3 - strlen(a:right) + 2)
+	let l:left = strpart(a:left, 0, s:length - s:margin * 3 - strlen(a:right) + 3)
 	return s:start . repeat(' ', s:margin - strlen(s:start)) . l:left . repeat(' ', 0 + s:length - s:margin * 2 - strlen(l:left) - strlen(a:right)) . a:right . repeat(' ', s:margin - strlen(s:end)) . s:end
 endfunction
 

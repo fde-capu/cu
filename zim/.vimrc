@@ -95,7 +95,7 @@ set wildmode=list:longest
 set noerrorbells
 set visualbell
 
-set t_ut=
+"set t_ut=
 "fixes background error if &term =~ '256color'
 
 " better tab navigation:
@@ -131,7 +131,11 @@ au FocusLost * :wa
 " :set spell
 
 " uses dracula
-colorscheme dracula
+"colorscheme dracula
+call plug#begin()
+Plug 'dracula/vim', {'as': 'dracula'}
+:PlugInstall
+call plug#end()
 
 " but with custom:
 :highlight Normal ctermbg=0
