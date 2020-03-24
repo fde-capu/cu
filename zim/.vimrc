@@ -1,14 +1,14 @@
-" ********************************************* "
-"                                               "
-"                      :|:|::|:|:||:|:::|:|||:  "
-"  .vimrc              |:|||:::|||:|:::|::::||  "
-"                      |::::|::::::||||||:|:|:  "
-"      ||||:| <||||:|>                          "
-"                                               "
-"  C20191204163730 ||||:|                       "
-"  U20200214142236 |:::||                       "
-"                                               "
-" ********************************************* "
+" **************************************************************************** "
+"                                                                              "
+"                                                         :::      ::::::::    "
+"    .vimrc                                             :+:      :+:    :+:    "
+"                                                     +:+ +:+         +:+      "
+"    By: fde-capu <fde-capu@student.42sp.org.br>    +#+  +:+       +#+         "
+"                                                 +#+#+#+#+#+   +#+            "
+"    Created: 2020/03/23 21:46:15 by fde-capu          #+#    #+#              "
+"    Updated: 2020/03/23 21:50:16 by fde-capu         ###   ########.fr        "
+"                                                                              "
+" **************************************************************************** "
 
 " Mouse events
 set mouse=a
@@ -25,7 +25,7 @@ set shiftwidth=4
 set softtabstop=4
 
 " uses pathogen plugin manager
-execute pathogen#infect()
+"execute pathogen#infect()
 
 " syntax
 syn on
@@ -58,36 +58,39 @@ set showcmd
 set showmode
 
 " auto read when file changes outside
-set autoread
+"set autoread
 " auto read will activate when entering insert mode:
-:au InsertEnter * checktime
-" the behavior above is not optimal and must me
+":au InsertEnter * checktime
+" the behavior above is not optimal and must be
 " taken with attention.
 
 " auto save and restores code folds between sessions
 autocmd BufWinLeave *.* mkview
 autocmd BufWinEnter *.* silent loadview
 
-" local dirs
+" transparent background
+hi Normal guibg=NONE ctermbg=NONE
+
+" local dirs (be sure of creating them)
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
 
 set t_co=256 "256 colors terminal
 
-if has('gui_running')
-	let g:molokai_original=0
-	colorscheme molokai
+#if has('gui_running')
+#	let g:molokai_original=0
+#	colorscheme molokai
+#
+#	"set guifont=Menlo:h13
+#	set gfn:Monaco:h13
+#	set transp=0
+#	set guioptions+=r
+#endif
 
-	"set guifont=Menlo:h13
-	set gfn:Monaco:h13
-	set transp=0
-	set guioptions+=r
-endif
-
-set laststatus=2
+"set laststatus=2
 set report=0 " show all changes
-set showmode
-set title
+"set showmode
+"set title
 
 set wildchar=<TAB>
 set wildmode=list:longest
@@ -99,46 +102,46 @@ set visualbell
 "fixes background error if &term =~ '256color'
 
 " better tab navigation:
-nnoremap <C-Left> :tabpreivous<CR>
-nnoremap <C-Right> :tabnext<CR>
+"nnoremap <C-Left> :tabpreivous<CR>
+"nnoremap <C-Right> :tabnext<CR>
 
 " tab navigation like firefox
-nnoremap <C-S-tab>	:tabprevious<CR> 
-nnoremap <C-tab>	:tabnext<CR>
-nnoremap <C-t>		:tabnem<CR>
-inoremap <C-S-tab>	<Esc>:tabprevious<CR>i
-inoremap <C-tab>	<Esc>:tabnext<CR>i
-inoremap <C-t>		<Esc>:tabnew<CR>
+"nnoremap <C-S-tab>	:tabprevious<CR> 
+"nnoremap <C-tab>	:tabnext<CR>
+"nnoremap <C-t>		:tabnem<CR>
+"inoremap <C-S-tab>	<Esc>:tabprevious<CR>i
+"inoremap <C-tab>	<Esc>:tabnext<CR>i
+"inoremap <C-t>		<Esc>:tabnew<CR>
 
 " ignores opened files
-set hidden
+"set hidden
 
 " my version of 'put' without moving the cursor using Pu
 " as in my question at SE Vi an Vim Beta
 command! -bar -bang -range -register Put call append(<line2> - <bang>0, getreg(<q-reg>, 1, 1))
 
 " autosave whenever buffer is switched
-set autowriteall
+"set autowriteall
 
 " autosave when window looses focus
-au FocusLost * :wa
+"au FocusLost * :wa
 
 " makes `:sb filename` usefull to swich splits by typing filename (w/ autocomplete!)
-" from tackoverflow 5305137     
- :set switchbuf +=useopen
+" from stackoverflow 5305137     
+set switchbuf +=useopen
  
  " spelling check ([s and s] moves, z= list, 1z= get first from list)
 " :set spell
 
 " uses dracula
-"colorscheme dracula
-call plug#begin()
-Plug 'dracula/vim', {'as': 'dracula'}
-:PlugInstall
-call plug#end()
+"colorscheme dracula "old Windows method
+"call plug#begin()	"lines below run just once
+"Plug 'dracula/vim', {'as': 'dracula'}
+":PlugInstall
+"call plug#end()
 
 " but with custom:
-:highlight Normal ctermbg=0
+":highlight Normal ctermbg=0
 
 " change current directory to the one the current buffer is
-:set autochdir
+set autochdir
