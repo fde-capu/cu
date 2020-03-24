@@ -6,7 +6,7 @@
 "    By: fde-capu <fde-capu@student.42sp.org.br>    +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2020/03/23 21:46:15 by fde-capu          #+#    #+#              "
-"    Updated: 2020/03/23 21:50:16 by fde-capu         ###   ########.fr        "
+"    Updated: 2020/03/23 21:53:43 by fde-capu         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -77,15 +77,15 @@ set directory=~/.vim/swaps
 
 set t_co=256 "256 colors terminal
 
-#if has('gui_running')
-#	let g:molokai_original=0
-#	colorscheme molokai
-#
-#	"set guifont=Menlo:h13
-#	set gfn:Monaco:h13
-#	set transp=0
-#	set guioptions+=r
-#endif
+"if has('gui_running')
+"	let g:molokai_original=0
+"#	colorscheme molokai
+"#
+"#	"set guifont=Menlo:h13
+"#	set gfn:Monaco:h13
+"#	set transp=0
+"#	set guioptions+=r
+"#endif
 
 "set laststatus=2
 set report=0 " show all changes

@@ -9,3 +9,5 @@
 
 cp ~/_/cu/zim/.vimrc ~/.vimrc
 cp -r ~/_/cu/zim/.vim/* ~/.vim
+mkdir -f ~/.vim/backups
+mkdir -f ~/.vim/swaps
