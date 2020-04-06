@@ -6,7 +6,7 @@
 "    By: fde-capu <fde-capu@student.42sp.org.br>    +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2020/03/23 21:46:15 by fde-capu          #+#    #+#              "
-"    Updated: 2020/04/06 15:08:04 by fde-capu         ###   ########.fr        "
+"    Updated: 2020/04/06 15:20:35 by fde-capu         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -150,3 +150,6 @@ set undofile
 
 " clear split backgrounds
 highlight VertSplit cterm=NONE
+
+" follow the file path
+set autochdir
