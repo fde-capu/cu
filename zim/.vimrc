@@ -6,7 +6,7 @@
 "    By: fde-capu <fde-capu@student.42sp.org.br>    +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2020/03/23 21:46:15 by fde-capu          #+#    #+#              "
-"    Updated: 2020/03/23 21:53:43 by fde-capu         ###   ########.fr        "
+"    Updated: 2020/04/06 12:37:35 by fde-capu         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -74,8 +74,6 @@ hi Normal guibg=NONE ctermbg=NONE
 " local dirs (be sure of creating them)
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
-
-set t_co=256 "256 colors terminal
 
 "if has('gui_running')
 "	let g:molokai_original=0
@@ -145,3 +143,6 @@ set switchbuf +=useopen
 
 " change current directory to the one the current buffer is
 set autochdir
+
+" persistent undo history
+set undofile
