@@ -11,3 +11,4 @@ cp ~/_/cu/zim/.vimrc ~/.vimrc
 cp -r ~/_/cu/zim/.vim/* ~/.vim
 mkdir -p ~/.vim/backups
 mkdir -p ~/.vim/swaps
+mkdir -p ~/.vim/undodir
