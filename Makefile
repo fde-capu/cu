@@ -22,6 +22,7 @@ all:	external install run
 
 install:	create_dir $(EXTERNALS)
 	cp $(INSTALLSHELLS) $(DESTDIR)$(LOCATION)
+	cp cuzim $(DESTDIR)$(LOCATION)
 	chmod +x $(DESTDIR)$(LOCATION)/cu*
 
 create_dir:
