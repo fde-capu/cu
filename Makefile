@@ -28,7 +28,8 @@ create_dir:
 	mkdir -p $(DESTDIR)$(LOCATION)
 	
 run:
-	bash ./bu_vim
+	@echo "Run the commands below as needed."
+	#bash ./bu_vim
 	#bash ./bu_byobu_nof1
 
 external:

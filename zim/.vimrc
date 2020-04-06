@@ -6,7 +6,11 @@
 "    By: fde-capu <fde-capu@student.42sp.org.br>    +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2020/03/23 21:46:15 by fde-capu          #+#    #+#              "
+<<<<<<< HEAD
 "    Updated: 2020/04/06 12:39:33 by fde-capu         ###   ########.fr        "
+=======
+"    Updated: 2020/03/30 09:51:23 by fde-capu         ###   ########.fr        "
+>>>>>>> 44a406226f8df5307d8ba619e9018bf5bae7aa22
 "                                                                              "
 " **************************************************************************** "
 
@@ -74,7 +78,10 @@ hi Normal guibg=NONE ctermbg=NONE
 " local dirs (be sure of creating them)
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
+<<<<<<< HEAD
 set undodir=~/.vim/undodir
+=======
+>>>>>>> 44a406226f8df5307d8ba619e9018bf5bae7aa22
 
 "if has('gui_running')
 "	let g:molokai_original=0
