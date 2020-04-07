@@ -1,0 +1,33 @@
+# ********************************************* #
+#                                               #
+#                      |:|||:||||:|:||:||::|||  #
+#  cu_xfce4-term-tran  ::|:|:|::||:|:::||||||:  #
+#                      ::|::|::::||::::::|:|||  #
+#                                               #
+#                                               #
+#  C20200407125816 |:||||                       #
+#  U20200407125858 |:::||                       #
+#                                               #
+# ********************************************* #
+
+# ass adapted from https://forum.xfce.org/viewtopic.php?pid=57488#p57488
+
+CONFIG_FILE=~/.config/xfce4/terminal/terminalrc
+OLD_VALUE=`sed -n 's/BackgroundDarkness=.*\.\(.*\)/\1/p' $CONFIG_FILE`
+
+case $OLD_VALUE in
+0)    NEW_VALUE=99  ;;
+10)   NEW_VALUE=0  ;;
+20)   NEW_VALUE=10  ;;
+30)   NEW_VALUE=20  ;;
+40)   NEW_VALUE=30  ;;
+50)   NEW_VALUE=40  ;;
+60)   NEW_VALUE=50  ;;
+70)   NEW_VALUE=60  ;;
+80)   NEW_VALUE=70  ;;
+90)   NEW_VALUE=80 ;;
+99)   NEW_VALUE=90  ;;
+*)    NEW_VALUE=99 ;;
+esac
+
+sed -i  "s/BackgroundDarkness.*/BackgroundDarkness=0.$NEW_VALUE/" $CONFIG_FILE
