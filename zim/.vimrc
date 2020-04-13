@@ -6,7 +6,7 @@
 "    By: fde-capu <fde-capu@student.42sp.org.br>    +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2020/03/23 21:46:15 by fde-capu          #+#    #+#              "
-"    Updated: 2020/04/13 05:14:53 by fde-capu         ###   ########.fr        "
+"    Updated: 2020/04/13 05:15:49 by fde-capu         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -155,7 +155,7 @@ highlight VertSplit cterm=NONE
 set autochdir
 
 " set some colors
-#colorscheme succubus
+"colorscheme succubus
 colorscheme midnight
 "set StatusLineNC ctermfg=232 ctermbg=68
 "set StatusLine ctermfg=232 ctermbg=75
