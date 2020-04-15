@@ -6,7 +6,7 @@
 "    By: fde-capu <fde-capu@student.42sp.org.br>    +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2020/03/23 21:46:15 by fde-capu          #+#    #+#              "
-"    Updated: 2020/04/13 05:15:49 by fde-capu         ###   ########.fr        "
+"    Updated: 2020/04/15 11:34:23 by fde-capu         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -156,6 +156,9 @@ set autochdir
 
 " set some colors
 "colorscheme succubus
-colorscheme midnight
+colorscheme ir_black
 "set StatusLineNC ctermfg=232 ctermbg=68
 "set StatusLine ctermfg=232 ctermbg=75
+
+" auto detect file changes
+set autoread
