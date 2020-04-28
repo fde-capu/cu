@@ -6,7 +6,7 @@
 "    By: fde-capu <fde-capu@student.42sp.org.br>    +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2020/03/23 21:46:15 by fde-capu          #+#    #+#              "
-"    Updated: 2020/04/24 18:10:29 by fde-capu         ###   ########.fr        "
+"    Updated: 2020/04/27 12:50:07 by fde-capu         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -65,8 +65,8 @@ set showmode
 " taken with attention.
 
 " auto save and restores code folds between sessions
-autocmd BufWinLeave *.* mkview
-autocmd BufWinEnter *.* silent loadview
+"autocmd BufWinLeave *.* mkview
+"autocmd BufWinEnter *.* silent loadview
 
 " transparent background
 hi Normal guibg=NONE ctermbg=NONE
@@ -167,24 +167,24 @@ set autoread
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
 
-" from https://www.vim.org/scripts/script.php?script_id=5109
-" #########################################################
-" # A way to delete 'mkview'
-function! MyDeleteView()
-	let path = fnamemodify(bufname('%'),':p')
-	" vim's odd =~ escaping for /
-	let path = substitute(path, '=', '==', 'g')
-	if empty($HOME)
-	else
-		let path = substitute(path, '^'.$HOME, '\~', '')
-	endif
-	let path = substitute(path, '/', '=+', 'g') . '='
-	" view directory
-	let path = &viewdir.'/'.path
-	call delete(path)
-	echo "Deleted: ".path
-endfunction
-command Delview call MyDeleteView()
-" Lower-case user commands: http://vim.wikia.com/wiki/Replace_a_builtin_command_using_cabbrev
-cabbrev delview <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'Delview' : 'delview')<CR>
-cabbrev delview <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'Delview' : 'dv')<CR>
+"" from https://www.vim.org/scripts/script.php?script_id=5109
+"" #########################################################
+"" # A way to delete 'mkview'
+"function! MyDeleteView()
+"	let path = fnamemodify(bufname('%'),':p')
+"	" vim's odd =~ escaping for /
+"	let path = substitute(path, '=', '==', 'g')
+"	if empty($HOME)
+"	else
+"		let path = substitute(path, '^'.$HOME, '\~', '')
+"	endif
+"	let path = substitute(path, '/', '=+', 'g') . '='
+"	" view directory
+"	let path = &viewdir.'/'.path
+"	call delete(path)
+"	echo "Deleted: ".path
+"endfunction
+"command Delview call MyDeleteView()
+"" Lower-case user commands: http://vim.wikia.com/wiki/Replace_a_builtin_command_using_cabbrev
+"cabbrev delview <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'Delview' : 'delview')<CR>
+"cabbrev delview <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'Delview' : 'dv')<CR>
