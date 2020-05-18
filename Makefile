@@ -14,11 +14,11 @@ LOCATION	=	/usr/local/bin
 
 EXTERNALS	=	../xic
 
-INSTALLSHELLS	=	cu_*
+INSTALLSHELLS	=	culo cu_*
 
 NAME		=	cu
 
-all:	external install run
+all:	install run
 
 install:	create_dir $(EXTERNALS)
 	cp $(INSTALLSHELLS) $(DESTDIR)$(LOCATION)
