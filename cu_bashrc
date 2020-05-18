@@ -5,7 +5,6 @@
 #
 #   cu_bashrc
 #
-# Edits ~/.bashrc template and updates on Vim.
 
 vim ~/_/cu/zim/.bashrc
 ~/_/cu/bu_bash

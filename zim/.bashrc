@@ -113,4 +113,4 @@ if ! shopt -oq posix; then
 fi
 [ -r /home/fde-capu/.byobu/prompt ] && . /home/fde-capu/.byobu/prompt   #byobu-prompt#
 export PKG_CONFIG_PATH=~/3rd/minilibx_linux
-alias cu='cd /home/fde-capu/_'
+alias cu="cd $CU"
