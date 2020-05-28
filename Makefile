@@ -12,15 +12,13 @@
 
 LOCATION	=	/usr/local/bin
 
-EXTERNALS	=	../xic
-
-INSTALLSHELLS	=	culo cu_*
+INSTALLSHELLS	=	cu_*
 
 NAME		=	cu
 
 all:	install run
 
-install:	create_dir $(EXTERNALS)
+install:	create_dir
 	cp $(INSTALLSHELLS) $(DESTDIR)$(LOCATION)
 	cp cuzim $(DESTDIR)$(LOCATION)
 	chmod +x $(DESTDIR)$(LOCATION)/cu*
@@ -32,6 +30,3 @@ run:
 	@echo "Run the commands below as needed."
 	#bash ./bu_vim
 	#bash ./bu_byobu_nof1
-
-external:
-	make install -C $(EXTERNALS)
