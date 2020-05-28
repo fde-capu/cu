@@ -1,0 +1,1 @@
+dbus-send --print-reply --dest=org.Cinnamon.Slideshow /org/Cinnamon/Slideshow org.Cinnamon.Slideshow.getNextImage

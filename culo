@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [ $1 ]
+then
+	dir=$1
+else
+	dir=$(pwd)
+fi
+export "CU=$dir"
+source ~/.bashrc
