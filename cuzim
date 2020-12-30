@@ -1,7 +1,0 @@
-#!/bin/bash
-
-cd
-cd _/cu/
-git add *
-git commit
-git push

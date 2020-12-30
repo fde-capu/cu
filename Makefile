@@ -10,23 +10,34 @@
 #                                               #
 # ********************************************* #
 
-LOCATION	=	/usr/local/bin
+LOCATION		=	/usr/local/bin
 
 INSTALLSHELLS	=	cu_*
 
-NAME		=	cu
+NAME			=	cu
 
-all:	install run
+all:			install run
 
-install:	create_dir
-	cp $(INSTALLSHELLS) $(DESTDIR)$(LOCATION)
-	cp cuzim $(DESTDIR)$(LOCATION)
-	chmod +x $(DESTDIR)$(LOCATION)/cu*
+install:		create_dir
+	cp $(INSTALLSHELLS) $(LOCATION)
+	cp cuzim $(LOCATION)
+	chmod +x $(LOCATION)/cu*
 
 create_dir:
-	mkdir -p $(DESTDIR)$(LOCATION)
+	mkdir -p $(LOCATION)
 	
 run:
 	@echo "Run the commands below as needed."
 	#bash ./bu_vim
 	#bash ./bu_byobu_nof1
+
+vim:
+	mkdir -p ~/.vim/after/plugin
+	mkdir -p ~/.vim/colors
+	mkdir -p ~/.vim/backups
+	mkdir -p ~/.vim/swaps
+	mkdir -p ~/.vim/undodir
+	rm -f ~/.vimrc
+	ln zim/.vimrc ~/
+	[ -f ~/.vim/colors/_bg.vim ] || ln zim/.vim/colors/_bg.vim ~/.vim/colors
+	[ -f ~/.vim/after/plugin/x_header.vim ] || ln zim/.vim/after/plugin/x_header.vim ~/.vim/after/plugin
