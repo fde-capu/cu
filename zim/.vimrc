@@ -189,4 +189,4 @@ autocmd GUIEnter * set visualbell t_vb=
 "cabbrev delview <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'Delview' : 'delview')<CR>
 "cabbrev delview <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'Delview' : 'dv')<CR>
 
-nmap <Space> <C-w>w
+nmap <Space> <C-w>
