@@ -17,7 +17,7 @@ set mouse=a
 set nowrap
 
 " Number line
-set nu
+" set nu
 
 " tabstops
 set tabstop=4
