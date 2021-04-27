@@ -1,3 +1,4 @@
+#include "CLASSNAME.hpp"
 #include <iostream>
 
 CLASSNAME::CLASSNAME(void)
