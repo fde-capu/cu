@@ -14,7 +14,7 @@ CLASSNAME::~CLASSNAME(void)
 	return ;
 }
 
-CLASSNAME::CLASSNAME =	operator + (CLASSNAME const & rhs)
+CLASSNAME::CLASSNAME &	operator = (CLASSNAME const & rhs)
 {
 	if (this != &rhs)
 	{
