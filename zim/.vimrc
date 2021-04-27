@@ -188,3 +188,5 @@ autocmd GUIEnter * set visualbell t_vb=
 "" Lower-case user commands: http://vim.wikia.com/wiki/Replace_a_builtin_command_using_cabbrev
 "cabbrev delview <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'Delview' : 'delview')<CR>
 "cabbrev delview <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'Delview' : 'dv')<CR>
+
+nmap <Space> <C-w>
