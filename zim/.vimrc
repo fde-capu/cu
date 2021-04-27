@@ -172,6 +172,6 @@ autocmd GUIEnter * set visualbell t_vb=
 nmap <Space> <C-w>
 
 " templating
-:autocmd BufNewFile *.hpp 0r ~/.vim/templates/coplien.hpp
-:autocmd BufNewFile *.cpp 0r ~/.vim/templates/coplien.cpp
-:autocmd BufNewFile *.hpp,*.cpp %s/CLASSNAME/\=expand('%:r')/g
+:autocmd BufNewFile [A-Z]*.hpp 0r ~/.vim/templates/coplien.hpp
+:autocmd BufNewFile [A-Z]*.cpp 0r ~/.vim/templates/coplien.cpp
+:autocmd BufNewFile [A-Z]*.hpp,[A-Z]*.cpp %s/CLASSNAME/\=expand('%:r')/g
