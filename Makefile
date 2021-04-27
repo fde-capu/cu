@@ -1,12 +1,12 @@
 # ********************************************* #
 #                                               #
 #                      |:|||:||||:|:||:||::|||  #
-#  Makefile            ::|:|:|::||:|:::||||||:  #
+#  Makefile            :|::::|:::||:::|:||::|:  #
 #                      ::|::|::::||::::::|:|||  #
 #                                               #
 #                                               #
 #  C20200407124249 ::|:::                       #
-#  U20200407124252 :|||::                       #
+#  U20210427161144 |:|:||                       #
 #                                               #
 # ********************************************* #
 
@@ -32,12 +32,4 @@ run:
 	#bash ./bu_byobu_nof1
 
 vim:
-	mkdir -p ~/.vim/after/plugin
-	mkdir -p ~/.vim/colors
-	mkdir -p ~/.vim/backups
-	mkdir -p ~/.vim/swaps
-	mkdir -p ~/.vim/undodir
-	rm -f ~/.vimrc
-	ln zim/.vimrc ~/
-	[ -f ~/.vim/colors/_bg.vim ] || ln zim/.vim/colors/_bg.vim ~/.vim/colors
-	[ -f ~/.vim/after/plugin/x_header.vim ] || ln zim/.vim/after/plugin/x_header.vim ~/.vim/after/plugin
+	./vim_install.sh

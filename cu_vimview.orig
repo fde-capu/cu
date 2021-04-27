@@ -1,7 +1,0 @@
-#!/bin/bash
-
-<<<<<<< HEAD
-rm ~/.vim/view/*
-=======
-@rm ~/.vim/views/*
->>>>>>> 137a412e3a1ea37b01956fc2706c75005cc62fcb

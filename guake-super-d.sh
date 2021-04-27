@@ -1,3 +1,3 @@
-#1/bin/sh
+#!/bin/sh
 wmctrl -k on
 guake --show
