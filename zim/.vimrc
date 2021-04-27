@@ -176,3 +176,4 @@ nmap <Space> <C-w>
 :autocmd BufNewFile [A-Z]*.cpp 0r ~/.vim/templates/coplien.cpp
 :autocmd BufNewFile [A-Z]*.hpp %s/CLASSNAME_HPP/\=toupper(expand('%:r'))."_HPP"/g
 :autocmd BufNewFile [A-Z]*.hpp,[A-Z]*.cpp %s/CLASSNAME/\=expand('%:r')/g
+:autocmd BufNewFile Makefile 0r ~/.vim/templates/Makefile
