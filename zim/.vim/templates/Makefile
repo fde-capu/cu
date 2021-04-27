@@ -21,8 +21,6 @@ clean:
 fclean:		clean
 	-rm -f $(NAME)
 re:			fclean all
-t:			all
-	./$(NAME)
 rt:			re t
 vf:			all
 	$(VAL) $(VALFLAG) ./$(NAME)
