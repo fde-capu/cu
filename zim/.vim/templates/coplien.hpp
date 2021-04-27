@@ -1,3 +1,8 @@
+#ifndef CLASSNAME_HPP
+# define CLASSNAME_HPP
+
+# include <iostream>
+
 class CLASSNAME
 {
 	public:
@@ -8,3 +13,5 @@ class CLASSNAME
 };
 
 std::ostream &	operator << (std::ostream & o, CLASSNAME const & i);
+
+#endif

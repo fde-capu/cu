@@ -1,3 +1,5 @@
+#include <iostream>
+
 CLASSNAME::CLASSNAME(void)
 {
 	return ;
