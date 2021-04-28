@@ -29,5 +29,6 @@ CLASSNAME &	CLASSNAME::operator = (CLASSNAME const & rhs)
 std::ostream &	operator << (std::ostream & o, CLASSNAME const & i)
 {
 	o << "::CLASSNAME::" << std::endl;
+	(void)i;
 	return o;
 }
