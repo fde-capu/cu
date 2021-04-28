@@ -8,7 +8,7 @@ CLASSNAME::CLASSNAME(void)
 
 CLASSNAME::CLASSNAME(CLASSNAME const & src)
 {
-	*this = std;
+	*this = src;
 	return ;
 }
 
@@ -17,7 +17,7 @@ CLASSNAME::~CLASSNAME(void)
 	return ;
 }
 
-CLASSNAME::CLASSNAME &	operator = (CLASSNAME const & rhs)
+CLASSNAME &	CLASSNAME::operator = (CLASSNAME const & rhs)
 {
 	if (this != &rhs)
 	{
