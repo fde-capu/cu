@@ -1,12 +1,12 @@
 " ********************************************* "
 "                                               "
 "                      :|:|::|:|:||:|:::|:|||:  "
-"  .vimrc              ||::|::||:||||::|||:::|  "
+"  .vimrc              :|:|:|::|||:||||::::|||  "
 "                      |::::|::::::||||||:|:|:  "
 "                                               "
 "                                               "
 "  C20200428074803 |::|::                       "
-"  U20200428074810 |:|:||                       "
+"  U20210428164237 :||:||                       "
 "                                               "
 " ********************************************* "
 
@@ -177,3 +177,5 @@ nmap <Space> <C-w>
 :autocmd BufNewFile [A-Z]*.hpp %s/CLASSNAME_HPP/\=toupper(expand('%:r'))."_HPP"/g
 :autocmd BufNewFile [A-Z]*.hpp,[A-Z]*.cpp %s/CLASSNAME/\=expand('%:r')/g
 :autocmd BufNewFile Makefile 0r ~/.vim/templates/Makefile
+
+:ino print std::cout << "" << std::endl;<Esc>2F"a
