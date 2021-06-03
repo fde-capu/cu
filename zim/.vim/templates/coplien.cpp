@@ -12,12 +12,7 @@ CLASSNAME::CLASSNAME(CLASSNAME const & src)
 	return ;
 }
 
-CLASSNAME::~CLASSNAME(void)
-{
-	return ;
-}
-
-CLASSNAME &	CLASSNAME::operator = (CLASSNAME const & rhs)
+CLASSNAME & CLASSNAME::operator = (CLASSNAME const & rhs)
 {
 	if (this != &rhs)
 	{
@@ -26,9 +21,19 @@ CLASSNAME &	CLASSNAME::operator = (CLASSNAME const & rhs)
 	return *this;
 }
 
-std::ostream &	operator << (std::ostream & o, CLASSNAME const & i)
+std::ostream & operator << (std::ostream & o, CLASSNAME const & self)
 {
 	o << "::CLASSNAME::" << std::endl;
-	(void)i;
+	(void)self;
 	return o;
+}
+
+CLASSNAME::~CLASSNAME(void)
+{
+	return ;
+}
+
+CLASSNAME * CLASSNAME::clone() const
+{
+	return new CLASSNAME(*this);
 }
