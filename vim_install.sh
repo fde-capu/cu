@@ -23,3 +23,4 @@ ln zim/.vimrc ~/
 [ -f ~/.vim/after/plugin/x_header.vim ] || ln zim/.vim/after/plugin/x_header.vim ~/.vim/after/plugin
 [ -f ~/.vim/templates/coplien.cpp ] || ln zim/.vim/templates/coplien.cpp ~/.vim/templates/coplien.cpp
 [ -f ~/.vim/templates/coplien.hpp ] || ln zim/.vim/templates/coplien.hpp ~/.vim/templates/coplien.hpp
+[ -f ~/.vim/templates/Makefile ] || ln zim/.vim/templates/Makefile ~/.vim/templates/Makefile
