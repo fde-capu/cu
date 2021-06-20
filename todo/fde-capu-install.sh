@@ -15,3 +15,4 @@ cp redshift.conf ~/.config/
 # Internets:
 # Invert mouse
 # Add bash completion: edito /etc/bash.bashrc, uncomment bash_completion session
+# Include font Iosevka Term SS04 Medium
