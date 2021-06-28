@@ -83,7 +83,9 @@ sudo apt -y install gconf2
 # Extension: Maximus
 # QRedShift
 
-
+# Ivosevka SS04:
+# https://github.com/be5invis/Iosevka/releases
+# sudo apt install font-manager
 
 # NOTE: These instructions only work for 64 bit Debian-based
 # Linux distributions such as Ubuntu, Mint etc.
