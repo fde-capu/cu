@@ -56,6 +56,7 @@ sudo apt -y install simplescreenrecorder
 sudo apt -y install nasm
 
 sudo apt -y install audacity easytag paprefs pavucontrol
+sudo apt -y install gconf2
 
 # 42 (might run into issues, better do it manually):
 #sudo apt install ruby ruby-bundler ruby-dev build-essential
